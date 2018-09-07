@@ -1,0 +1,25 @@
+{
+    "env": {
+        "node": true,
+        "es6": true
+    },
+    "extends": "airbnb-base",
+    "plugins": [
+        "import"
+    ],
+    "root": true,
+    "rules": {
+        "no-loop-func": [
+            "off"
+        ],
+        "no-await-in-loop": [
+            "off"
+        ],
+        "no-restricted-syntax": [
+            "error",
+            "ForInStatement",
+            "LabeledStatement",
+            "WithStatement"
+        ]
+    }
+}

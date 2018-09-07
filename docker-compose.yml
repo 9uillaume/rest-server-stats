@@ -1,0 +1,18 @@
+version: "2"
+services:
+  rest-server-stats: 
+    image: guiz/rest-server-stats
+    ports: 
+      - 80:8989
+    command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; npm start'
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgres://playground:ZBpamPnEUeQYEtPeYnn7HHDX@db:5432/playground
+      - PORT=8989   
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=playground
+      - POSTGRES_PASSWORD=ZBpamPnEUeQYEtPeYnn7HHDX
+      - POSTGRES_DB=playground
