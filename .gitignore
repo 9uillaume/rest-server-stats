@@ -62,3 +62,6 @@ typings/
 
 # Editor repo config
 .vscode
+
+# Packages history
+package-lock.json

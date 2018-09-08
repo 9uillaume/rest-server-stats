@@ -1,7 +1,7 @@
 version: "2"
 services:
   rest-server-stats: 
-    image: guiz/rest-server-stats
+    image: node
     ports: 
       - 80:8989
     command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; npm start'
