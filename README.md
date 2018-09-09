@@ -17,3 +17,23 @@ tests requires execution of an **.sql** file setting up a dummy database
 then you are welcome to run the tests with:
 
 `npm test`
+
+## API
+REST server runs on port `8989`, the endpoints are as follow:
+
+### Authentication
+*GET* `127.0.0.1:8989/login`
+
+Responds with a JWT (token), necessary to authenticate to protected endpoints.
+
+### New location creation
+*POST* `127.0.0.1:8989/api/location/create`
+
+Expect a *name* field such as:
+
+`{
+	"name": "Paris"
+}`
+
+### Retrieves all locations
+*GET* `127.0.0.1:8989/api/locations`
